@@ -10,6 +10,10 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #353430;
+  --accent-color-half-transparent: rgba(53, 52, 48, 0.4);
+  --accent-background-color: #FF8DCB;
+  --main-title-color: #FFC2E6;
+  --articles-text-color: #353430;
 }
 
 .theme-light .page {
@@ -21,46 +25,13 @@
   display: none;
 }
 
-.theme-light .main-title {
-  color: #FFC2E6;
-}
-
-.theme-light .header__title {
-  text-shadow: 4px 4px 0 #FF8DCB;
-}
-
-.theme-light .header__theme-menu-button:hover {
-  border: 1px solid rgba(53, 52, 48, 0.4);
-}
-
-.theme-light .title-decor {
-  color: var(--accent-color);
-  background-color: #FF8DCB;
-}
-
-.theme-light .article__text {
-  color: var(--accent-color);
-}
-
-.theme-light .article__text-link {
-  text-shadow: 1.5px 2px 0 #FF8DCB;
-}
-
-.theme-light .article__text-link:hover {
-  border-bottom: 1px solid var(--accent-color);
-}
-
-.theme-light .article__text-link:focus-visible {
-  outline: 1px solid var(--accent-color);
-}
-
-.theme-light .footer__title {
-  text-shadow: 2px 2px 0 #ff0070;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #353430;
+    --accent-color-half-transparent: rgba(53, 52, 48, 0.4);
+    --accent-background-color: #FF8DCB;
+    --main-title-color: #FFC2E6;
+    --articles-text-color: #353430;
   }
 
   /* Остальные стили, только при необходимости */
@@ -71,42 +42,5 @@
 
   .header__rec {
     display: none;
-  }
-
-  .main-title {
-    color: #FFC2E6;
-  }
-
-  .header__title {
-    text-shadow: 4px 4px 0 #FF8DCB;
-  }
-
-  .header__theme-menu-button:hover {
-    border: 1px solid rgba(53, 52, 48, 0.4);
-  }
-
-  .title-decor {
-    color: var(--accent-color);
-    background-color: #FF8DCB;
-  }
-
-  .article__text {
-    color: var(--accent-color);
-  }
-
-  .article__text-link {
-    text-shadow: 1.5px 2px 0 #FF8DCB;
-  }
-
-  .article__text-link:hover {
-    border-bottom: 1px solid var(--accent-color);
-  }
-
-  .article__text-link:focus-visible {
-    outline: 1px solid var(--accent-color);
-  }
-
-  .footer__title {
-    text-shadow: 2px 2px 0 #ff0070;
   }
 } 

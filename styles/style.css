@@ -42,6 +42,7 @@
   block-size: 100vh;
   min-block-size: 668px;
   margin-block-end: var(--main-section-margin);
+  font-family: var(--main-font-family), monospace;
 }
 
 .header__rec {
@@ -59,12 +60,11 @@
   position: absolute;
   inline-size: 10px;
   block-size: 10px;
-  margin: -5px -20px 0 0;
+  top: 7px;
+  left: 42px;
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
   background-color: var(--accent-color);
-  inset-inline-end: 0;
-  inset-block-start: 50%;
 }
 
 .header__theme-menu {
@@ -80,7 +80,6 @@
 
 .header__theme-menu-button {
   border: none;
-  font-family: var(--main-font-family);
   font-weight: 400;
   font-size: var(--main-text-size);
   color: var(--accent-color);
@@ -88,10 +87,11 @@
   background-color: transparent;
   padding-inline: 13px;
   padding-block: 1.5px;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
+  border: 1px solid var(--accent-color-half-transparent);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -105,15 +105,15 @@
 }
 
 .main-title {
-  font-family: var(--main-font-family);
+  font-family: var(--main-font-family), monospace;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.83;
-  color: #DB00FF;
+  color: var(--main-title-color)
 }
 
 .header__title {
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--accent-background-color);
   margin-inline-start: var(--main-gap);
   margin-inline-end: var(--main-gap);
 }
@@ -121,7 +121,7 @@
 .header__description {
   justify-self: end;
   align-self: center;
-  font-family: var(--main-font-family);
+  font-family: var(--main-font-family), monospace;
   font-weight: 700;
   font-size: var(--main-text-size);
   line-height: var(--main-line-height);
@@ -133,14 +133,14 @@
 .title-decor {
   font-weight: 700;
   color: #000028;
-  background-color: var(--accent-color);
+  background-color: var(--accent-background-color);
 }
 
 .content {
   margin-inline-start: var(--main-gap);
   margin-inline-end: var(--main-gap);
   margin-block-end: var(--main-section-margin);
-  font-family: var(--main-font-family);
+  font-family: var(--main-font-family), monospace;
   font-size: var(--main-text-size);
   line-height: var(--main-line-height);
 }
@@ -151,7 +151,7 @@
 }
 
 .content-container:not(:last-child) {
-  margin-block-end: var(--section__articles-list-margin);
+  margin-block-end: var(--section-articles-list-margin);
 }
 
 .content-container__title {
@@ -173,7 +173,7 @@
 
 .article__text {
   font-weight: 400;
-  color: #F1B2CE;
+  color: var(--articles-text-color);
 }
 
 .advices-text__title {
@@ -182,19 +182,20 @@
 
 .article__text-link {
   text-decoration: none;
-  text-shadow: 1.5px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-background-color);
+  cursor: pointer;
 }
 
 .article__text-link:hover {
-  border-bottom: 1px solid #F1B2CE;
+  border-bottom: 1px solid var(--articles-text-color);
 }
 
 .article__text-link:focus-visible {
-  outline: 1px solid #F1B2CE;
+  outline: 1px solid var(--articles-text-color);
 }
 
 .advices-images__title {
-  margin-block-start: calc(var(--section__articles-list-margin) - 20px);
+  margin-block-start: calc(var(--section-articles-list-margin) - 20px);
   margin-block-end: var(--main-gap);
 }
 
@@ -218,22 +219,12 @@
 }
 
 .footer__title {
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-background-color);
   margin-inline-start: 14px;
   margin-inline-end: 13px;
 }
 
 @media (width >= 768px) {
-  :root {
-    --main-gap: 20px;
-    --main-section-margin: 60px;
-    --section__articles-list-margin: 80px;
-  }
-
-  .header {
-    min-block-size: 1024px;
-  }
-
   .main-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -291,17 +282,9 @@
   .street {
     grid-column: 2/-1;
   }
-
-  .footer {
-    min-block-size: 1024px;
-  }
 }
 
 @media (width >= 1024px) {
-  .header {
-    min-block-size: 768px;
-  }
-
   .header__description {
     inline-size: 48%;
   }
@@ -321,9 +304,5 @@
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .footer {
-    min-block-size: 768px;
   }
 }

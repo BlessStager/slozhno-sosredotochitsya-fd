@@ -4,10 +4,22 @@
 */
 :root {
     --main-text-size: 18px;
-    --main-font-family: 'IBM Plex mono', monospace;
+    --main-font-family: 'IBM Plex mono';
     --accent-color: #ff0070;
+    --accent-color-half-transparent: rgba(255, 0, 112, 0.4);
+    --accent-background-color: #ff0070;
+    --main-title-color: #DB00FF;
+    --articles-text-color: #F1B2CE;
     --main-gap: 10px;
     --main-section-margin: 40px;
-    --section__articles-list-margin: 50px;
+    --section-articles-list-margin: 50px;
     --main-line-height: 1.3;
+}
+
+@media (width >= 768px) {
+  :root {
+    --main-gap: 20px;
+    --main-section-margin: 60px;
+    --section-articles-list-margin: 80px;
+  }
 }
